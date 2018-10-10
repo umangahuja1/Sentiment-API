@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 from sentiment import sentiment_analysis
 
 app = Flask(__name__)
@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return 'hello'
+    return render_template('index.html')
 
 
 @app.route('/sentiment', methods=['POST'])

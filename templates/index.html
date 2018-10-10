@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sentiment Analysis</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Sentiment Analysis API</h1><br>
+        <h4>This is a sentiment analysis API with endpoint : <a target="_blank" href="https://sentiment-analysis-api.herokuapp.com/sentiment">https://sentiment-analysis-api.herokuapp.com/sentiment</a> <br><br> Make a post request to get the sentiment and pass the text as string or json format </h4>
+    </div>
+
+    <div class="container" style="margin:50px">
+        <pre>
+
+            import requests
+            import json
+
+            data = {'text' : 'I am cool'}
+
+            res = requests.post('https://sentiment-analysis-api.herokuapp.com/sentiment', json = data)
+
+            print(res.text)
+        </pre>
+
+        <pre>
+
+            <b>Output :</b>
+
+                Positive
+        </pre>
+    </div>
+</body>
+</html>
